@@ -1,0 +1,297 @@
+/* Reset some default styles */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    color: white;
+}
+
+/* Main container */
+#main {
+    width: 100%;
+    height: 100vh;
+    background-color: #1a0f00;
+    /* background-image: url("b.png");
+    background-size: cover;
+    background-position: top; */
+
+
+}
+
+/* Style for the navbar */
+.navbar {
+    height: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: white;
+    padding: 35px 40px;
+    position: relative;
+    z-index: 9999;
+}
+
+.navbar img {
+    margin-left: 1.75vw;
+    margin-bottom: 16px;
+}
+
+/* Style for the navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    letter-spacing: 1px;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 66px;
+    position: relative;
+    opacity: .8;
+}
+
+.active {
+    opacity: 1 !important;
+
+}
+
+.active::after {
+    content: '';
+    display: block;
+    width: 70%;
+    height: 3px;
+    background: #f29c29;
+    transition: width .3s;
+}
+
+/* animate link */
+li {
+    margin-bottom: 10px;
+}
+
+.cool-link {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #f29c29;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 70%;
+    transition: width .3s;
+}
+
+/* end */
+
+.nav-links .fa-solid {
+    background-color: #f29c29;
+    color: #1a0f00;
+    font-size: 24px;
+    padding: 10px 15px;
+}
+.whit-padd1 {
+    background-color: #ffffff;
+    width: 60px;
+    padding-left: 5px;
+    
+    
+    
+
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+    font-size: 1.2vw;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #f29c29;
+
+}
+
+/* Style for the dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 150px;
+    text-align: left;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style for the burger menu (hidden on larger screens) */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* hero1 */
+#hearo1 {
+    width: 100%;
+    height: calc(100% - 5vw);
+    display: flex;
+    position: relative;
+
+}
+
+.hr-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-left: 3.5vw;
+    padding-top: 3vw;
+
+}
+
+.bn-img {
+    width: 100%;
+    height: 100%;
+    padding-right: 5%;
+
+    overflow: hidden;
+    position: relative;
+   
+}
+
+
+.hr-right {
+    width: 50%;
+    height: calc(100% + 40px);
+    
+    position: relative;
+    bottom: 60px;
+
+
+}
+
+
+.hr-left h1 {
+    color: #f29c29;
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hr-left h3 {
+    color: #ffffff;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: -20px;
+}
+
+.hr-left p {
+    color: #ffffff;
+    font-size: 1rem;
+    opacity: .8;
+    padding-right: 30%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+
+}
+
+.form-controol {
+    padding-right: 20%;
+    padding-left: 10px;
+    height: 40px;
+}
+
+.btn-color {
+    background-color: #f29c29;
+    width: 100px;
+    border-radius: 0%;
+    text-transform: uppercase;
+    font-weight: 600;
+    
+}
+.whit-padd {
+    background-color: #ffffff;
+    width: 105px;
+    margin-top: 10px;
+    
+    
+
+}
+
+.fa-brands {
+    color: #f29c29;
+    font-size: 1.5rem;
+    margin: 10px;
+    padding-top: 70px;
+
+}
+
+
+.element {
+    width: calc(95% - 10vw);
+    position: absolute;
+    padding-top: 2vw;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    /* Adjust styles for smaller screens */
+
+    /* Styles for the mobile navigation menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+    /* #hearo1 {
+        width: 100%;
+        height: calc(100% - 5vw);
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+    
+    } */
+
+    /* Additional responsive adjustments */
+    /* ... */
+}
+
